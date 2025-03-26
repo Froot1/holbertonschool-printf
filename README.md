@@ -96,3 +96,20 @@ Write a `man` page (`man_3_printf`) documenting `_printf`.
 3. **Test the `man` page**:  
    ```sh
    man ./man_3_printf
+
+---
+
+## Task 3: Handle `%b` (Binary Conversion Specifier)
+
+### Requirement:
+Add support for `%b` to print an unsigned int in binary format.
+
+### Steps:
+1. Create `print_b()` to handle binary conversion.
+2. Use `va_arg()` to extract the unsigned int argument.
+3. Loop through each bit using bitwise operations.
+4. Print `1`s and `0`s using `_putchar()`.
+5. If the number is `0`, print `0`.
+6. Integrate `%b` into `_printf`.
+
+---
