@@ -79,3 +79,20 @@ Modify `_printf` to support printing integers using:
     *   If the number is negative, print a minus sign `-` before the absolute value of the number.
 
 ---
+
+### Task 2: Create a `man` page for `_printf`
+
+#### **Requirement**:  
+Write a `man` page (`man_3_printf`) documenting `_printf`.  
+
+#### **Steps**:  
+
+1. **Create the file**:  
+   - Name it `man_3_printf`.  
+
+2. **Follow `man` page structure**:  
+   - Include sections: NAME, SYNOPSIS, DESCRIPTION, SPECIFIERS, COMPILATION, RETURN VALUE, EXAMPLES, SEE ALSO, AUTHORS, and BUGS.  
+
+3. **Test the `man` page**:  
+   ```sh
+   man ./man_3_printf
