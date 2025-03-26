@@ -1,5 +1,5 @@
 ## printf
-
+0;276;0c
 This Repo has all the code necessary for our project printf function that formats and prints data.
 
 Description
@@ -95,7 +95,7 @@ Write a `man` page (`man_3_printf`) documenting `_printf`.
 
 3. **Test the `man` page**:  
    ```sh
-   man ./man_3_printf
+   man man_3_printf
 
 ---
 
