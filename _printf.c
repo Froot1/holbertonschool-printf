@@ -16,7 +16,9 @@ int _printf(const char * const format, ...)
 		{"%s", print_s}, {"%c", print_c},
 		{"%%", print_37},
 		{"%i", print_i}, {"%d", print_d},
-		{"%b", print_b}
+		{"%b", print_b},
+		{"%o", print_o}, {"%x", print_x},
+		{"%X", print_X}
 
 	};
 
@@ -30,7 +32,7 @@ int _printf(const char * const format, ...)
 Here:
 	while (format[i] != '\0')
 	{
-		j = 5;
+		j = 8;
 		while (j >= 0)
 		{
 			if (p[j].ph[0] == format[i] && p[j].ph[1] == format[i + 1])
