@@ -114,25 +114,33 @@ Add support for `%b` to print an unsigned int in binary format.
 
 ---
 
-### **Task 4: Handle `%u`, `%o`, `%x`, and `%X` Conversion Specifiers**
+## Task 4: Handle `%u`, `%o`, `%x`, and `%X` Conversion Specifiers  
 
-### **Requirements:**
+### Requirements  
+This update adds support for the following format specifiers in `_printf()`:  
+- `%u` → Prints an unsigned integer in decimal format.  
+- `%o` → Prints an unsigned integer in octal format.  
+- `%x` → Prints an unsigned integer in lowercase hexadecimal format.  
+- `%X` → Prints an unsigned integer in uppercase hexadecimal format.  
 
-Add support for:
+### Implementation Steps  
 
-- **`%u`**: Prints an unsigned integer in decimal.
-- **`%o`**: Prints an unsigned integer in octal.
-- **`%x`**: Prints an unsigned integer in lowercase hexadecimal.
-- **`%X`**: Prints an unsigned integer in uppercase hexadecimal.
+1. **Create Conversion Functions:**  
+   - `print_u()`: Converts an unsigned integer to decimal format and prints it.  
+   - `print_o()`: Converts an unsigned integer to octal format and prints it.  
+   - `print_x()`: Converts an unsigned integer to lowercase hexadecimal format and prints it.  
+   - `print_X()`: Converts an unsigned integer to uppercase hexadecimal format and prints it.  
 
-### **Steps:**
-1. **Create functions**: 
-   - `print_u()`, `print_o()`, `print_x()`, `print_X()` to convert integers to respective formats.
-2. **Modify `_printf()`**: Detect `%u`, `%o`, `%x`, `%X` and call the corresponding function.
-3. **Conversion**: 
-   - Use `va_arg()` to get the integer.
-   - Convert it using division (10 for decimal, 8 for octal, 16 for hexadecimal).
-   - Print digits with `_putchar()`.
+2. **Integrate into `_printf()`:**  
+   - Modify `_printf()` to detect `%u`, `%o`, `%x`, and `%X`.  
+   - Call the corresponding function to handle the conversion.  
+
+3. **Number Conversion Process:**  
+   - Extract the unsigned integer using `va_arg()`.  
+   - Convert it by dividing:  
+   - By `8` for octal (`%o`).  
+     - By `16` for hexadecimal (`%x` and `%X`).  
+   - Print the digits using `_putchar()`, ensuring proper character mapping (`0-9, a-f` for `%x` and `0-9, A-F` for `%X`).  
 
 ---
 
