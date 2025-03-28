@@ -1,5 +1,5 @@
 ## printf
-0;276;0c
+
 This Repo has all the code necessary for our project printf function that formats and prints data.
 
 Description
@@ -111,5 +111,46 @@ Add support for `%b` to print an unsigned int in binary format.
 4. Print `1`s and `0`s using `_putchar()`.
 5. If the number is `0`, print `0`.
 6. Integrate `%b` into `_printf`.
+
+---
+
+# printf Project
+
+## Task 4: Handle `%u`, `%o`, `%x`, and `%X` Conversion Specifiers  
+
+### Requirements  
+This update adds support for the following format specifiers in `_printf()`:  
+- `%u` → Prints an unsigned integer in decimal format.  
+- `%o` → Prints an unsigned integer in octal format.  
+- `%x` → Prints an unsigned integer in lowercase hexadecimal format.  
+- `%X` → Prints an unsigned integer in uppercase hexadecimal format.  
+
+### Implementation Steps  
+
+1. **Create Conversion Functions:**  
+   - `print_u()`: Converts an unsigned integer to decimal format and prints it.  
+   - `print_o()`: Converts an unsigned integer to octal format and prints it.  
+   - `print_x()`: Converts an unsigned integer to lowercase hexadecimal format and prints it.  
+   - `print_X()`: Converts an unsigned integer to uppercase hexadecimal format and prints it.  
+
+2. **Integrate into `_printf()`:**  
+   - Modify `_printf()` to detect `%u`, `%o`, `%x`, and `%X`.  
+   - Call the corresponding function to handle the conversion.  
+
+3. **Number Conversion Process:**  
+   - Extract the unsigned integer using `va_arg()`.  
+   - Convert it by dividing:  
+     - By `10` for decimal (`%u`).  
+     - By `8` for octal (`%o`).  
+     - By `16` for hexadecimal (`%x` and `%X`).  
+   - Print the digits using `_putchar()`, ensuring proper character mapping (`0-9, a-f` for `%x` and `0-9, A-F` for `%X`).  
+
+### Example Usage  
+
+```c
+_printf("Unsigned: %u\n", 12345);
+_printf("Octal: %o\n", 12345);
+_printf("Hex (lowercase): %x\n", 12345);
+_printf("Hex (uppercase): %X\n", 12345);
 
 ---
