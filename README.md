@@ -144,3 +144,23 @@ This update adds support for the following format specifiers in `_printf()`:
    - Print the digits using `_putchar()`, ensuring proper character mapping (`0-9, a-f` for `%x` and `0-9, A-F` for `%X`).  
 
 ---
+
+---
+
+### **Task 7: Handle `%S` Conversion Specifier**
+
+### **Requirement:**
+Modify `_printf` to support printing strings using:
+- **`%S`**: Prints a string, replacing non-printable characters (ASCII < 32 or >= 127) with `\xXX`, where `XX` is the uppercase hexadecimal representation of the ASCII value.
+
+### **Steps:**
+
+1. **Detect `%S`** in the format string and call `print_S`.
+2. **Retrieve the string** using `va_arg`.
+3. **Iterate through the string**:
+   * Print **printable characters** as is.
+   * For **non-printable characters**, print `\xXX` (hexadecimal format).
+4. **Count the printed characters** including escape sequences.
+
+
+---

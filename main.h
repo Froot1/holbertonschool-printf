@@ -35,4 +35,5 @@ int print_o(va_list args);
 int test_print_o(unsigned int n);
 int print_x(va_list args);
 int print_X(va_list args);
+int print_S(va_list args);
 #endif
