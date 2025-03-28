@@ -114,8 +114,6 @@ Add support for `%b` to print an unsigned int in binary format.
 
 ---
 
-# printf Project
-
 ## Task 4: Handle `%u`, `%o`, `%x`, and `%X` Conversion Specifiers  
 
 ### Requirements  
@@ -144,13 +142,5 @@ This update adds support for the following format specifiers in `_printf()`:
      - By `8` for octal (`%o`).  
      - By `16` for hexadecimal (`%x` and `%X`).  
    - Print the digits using `_putchar()`, ensuring proper character mapping (`0-9, a-f` for `%x` and `0-9, A-F` for `%X`).  
-
-### Example Usage  
-
-```c
-_printf("Unsigned: %u\n", 12345);
-_printf("Octal: %o\n", 12345);
-_printf("Hex (lowercase): %x\n", 12345);
-_printf("Hex (uppercase): %X\n", 12345);
 
 ---
