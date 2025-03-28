@@ -1,44 +1,37 @@
 #include "main.h"
 /**
- * print_u - prints integer
- * @args: argument to print
- * Return: integer
- */
+  * print_u - prints an unsigned integer
+  * @args: argument to print
+  * Return: integer
+  */
 int print_u(va_list args)
 {
-        int n = va_arg(args, int);
-        int num, last = n % 10, digit, exp = 1;
-        int  i = 1;
+    unsigned int n = va_arg(args, unsigned int);
+    unsigned int num, last, exp = 1;
+    int i = 0;
 
-        n = n / 10;
-        num = n;
+    if (n == 0)
+    {
+        _putchar('0');
+        return (1);
+    }
 
-        if (last < 0)
-        {
-                _putchar('-');
-                num = -num;
-                n = -n;
-                last = -last;
-                i++;
-        }
-        if (num > 0)
-        {
-                while (num / 10 != 0)
-                {
-                        exp = exp * 10;
-                        num = num / 10;
-                }
-                num = n;
-                while (exp > 0)
-                {
-                        digit = num / exp;
-                        _putchar(digit + '0');
-                        num = num - (digit * exp);
-                        exp = exp / 10;
-                        i++;
-                }
-        }
+    num = n;
+    while (num / 10 != 0)
+    {
+        exp *= 10;
+        num /= 10;
+    }
+
+    num = n;
+    while (exp > 0)
+    {
+        last = num / exp;
         _putchar(last + '0');
+        num %= exp;
+        exp /= 10;
+        i++;
+    }
 
-        return (i);
+    return (i);
 }
