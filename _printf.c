@@ -17,8 +17,8 @@ int _printf(const char * const format, ...)
 		{"%%", print_37},
 		{"%i", print_i}, {"%d", print_d},
 		{"%b", print_b},
-		{"%o", print_o}, {"%x", print_x},
-		{"%X", print_X}
+		{"%u", print_u}, {"%o", print_o},
+		{"%x", print_x}, {"%X", print_X}
 
 	};
 
