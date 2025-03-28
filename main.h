@@ -30,4 +30,7 @@ int print_s(va_list val);
 int _putchar(char c);
 int _printf(const char *format, ...);
 int print_b(va_list val);
+int print_o(va_list args);
+int print_x(va_list args);
+int print_X(va_list args);
 #endif
