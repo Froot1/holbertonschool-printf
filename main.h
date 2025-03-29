@@ -38,5 +38,5 @@ int print_X(va_list args);
 int print_S(va_list args);
 int print_p(va_list args);
 int _puts(char *str);
-int print_hex(unsigned long int num, int uppercase);
+int print_hex(unsigned long num, int uppercase);
 #endif

@@ -1,21 +1,21 @@
 #include "main.h"
 
 /**
- * print_hex - Converts an unsigned long int to hexadecimal and prints it
- * @num: The number to convert
- * @uppercase: If 1, prints uppercase letters; otherwise, lowercase
- * Return: Number of characters printed
+ * print_hex - Converts an unsigned long integer to hexadecimal and prints it.
+ * @num: The number to convert.
+ * @uppercase: 1 for uppercase letters, 0 for lowercase.
+ * Return: The number of characters printed.
  */
-int print_hex(unsigned long int num, int uppercase)
+int print_hex(unsigned long num, int uppercase)
 {
     char buffer[20];
-    int i = 0, count = 0;
     char *hex_digits = uppercase ? "0123456789ABCDEF" : "0123456789abcdef";
+    int i = 0, count = 0;
 
     if (num == 0)
         return (_putchar('0'));
 
-    while (num)
+    while (num > 0)
     {
         buffer[i++] = hex_digits[num % 16];
         num /= 16;
