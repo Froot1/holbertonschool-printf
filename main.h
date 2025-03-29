@@ -36,4 +36,6 @@ int test_print_o(unsigned int n);
 int print_x(va_list args);
 int print_X(va_list args);
 int print_S(va_list args);
+int print_p(va_list args);
+int print_hex(unsigned long int num, int uppercase);
 #endif

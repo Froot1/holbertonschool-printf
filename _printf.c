@@ -19,7 +19,8 @@ int _printf(const char * const format, ...)
 		{"%b", print_b},
 		{"%u", print_u}, {"%o", print_o},
 		{"%x", print_x}, {"%X", print_X},
-		{"%S", print_S}
+		{"%S", print_S}, {'p', print_p},
+	       	{'\0', NULL}
 
 	};
 
