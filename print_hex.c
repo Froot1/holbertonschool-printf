@@ -3,7 +3,7 @@
 /**
  * print_hex - Converts an unsigned long int to hexadecimal and prints it
  * @num: The number to convert
- * @uppercase: Flag to determine if the output should be uppercase
+ * @uppercase: If 1, prints uppercase letters; otherwise, lowercase
  * Return: Number of characters printed
  */
 int print_hex(unsigned long int num, int uppercase)

@@ -1,26 +1,30 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * print_p - Prints a pointer address in hexadecimal format
- * @args: Argument list
+ * print_p - Prints a pointer address in hexadecimal format (`%p`).
+ * @args: List of arguments
  * Return: Number of characters printed
  */
 int print_p(va_list args)
 {
     void *ptr;
-    unsigned long int address;
+    char buffer[20]; /* Buffer to store the address in hexadecimal */
     int count = 0;
 
-    ptr = va_arg(args, void *);
+    ptr = va_arg(args, void *); /* Retrieve the pointer from the argument list */
 
-    if (!ptr)
-        return (_puts("(nil)"));
+    if (ptr == NULL)
+    {
+        return (_puts("(nil)")); /* Print (nil) if the pointer is NULL */
+    }
 
-    address = (unsigned long int)ptr;
+    /* Convert the address to hexadecimal format */
+    snprintf(buffer, sizeof(buffer), "%p", ptr);
 
-    count += _puts("0x");
-    count += print_hex(address, 0); /* 0 for lowercase */
+    /* Print the formatted address */
+    count = _puts(buffer);
 
     return (count);
 }
