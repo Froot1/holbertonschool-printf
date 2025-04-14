@@ -8,10 +8,10 @@
  */
 int print_p(va_list args)
 {
-    void *ptr = va_arg(args, void *);
+	void *ptr = va_arg(args, void *);
 
-    if (ptr == NULL)
-        return (_puts("(nil)"));
+	if (ptr == NULL)
+		return (_puts("(nil)"));
 
-    return (_printf("0x%lx", (unsigned long)ptr));
+	return (_printf("0x%lx", (unsigned long)ptr));
 }

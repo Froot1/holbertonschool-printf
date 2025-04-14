@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-* print_X - Prints an unsigned integer in hexadecimal format 
+* print_X - Prints an unsigned integer in hexadecimal format
 * @args: List of arguments containing the number to print
-* 
+*
 * Return: The number of characters printed
 */
 int print_X(va_list args)

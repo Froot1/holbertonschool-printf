@@ -3,7 +3,6 @@
 /**
 * print_x - Prints an unsigned integer in hexadecimal format (lowercase)
 * @args: List of arguments containing the number to print
-* 
 * Return: The number of characters printed
 */
 int print_x(va_list args)

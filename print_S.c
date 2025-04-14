@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_S - Prints a string 
-* @args: List of arguments
-* Return: Number of characters printed
-*/
+ * print_S - Prints a string
+ * @args: List of arguments
+ * Return: Number of characters printed
+ */
 
 int print_S(va_list args)
 {
